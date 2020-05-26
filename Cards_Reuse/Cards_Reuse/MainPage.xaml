@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             mc:Ignorable="d"
+             x:Class="Cards_Reuse.MainPage">
+
+    <StackLayout>
+        <cards:SfCardView SwipeToDismiss="True"
+                          VerticalOptions="Center"
+                          HorizontalOptions="Center"
+                          x:Name="cardView"
+                          Dismissed="SfCardView_Dismissed">
+
+            <StackLayout HeightRequest="100"
+                         BackgroundColor="Red"
+                         WidthRequest="200">
+                <Label  Text="CardView1"
+                        FontSize="Large"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </cards:SfCardView>
+    </StackLayout>
+
+
+</ContentPage>
