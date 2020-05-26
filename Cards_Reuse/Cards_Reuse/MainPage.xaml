@@ -7,24 +7,23 @@
              mc:Ignorable="d"
              x:Class="Cards_Reuse.MainPage">
 
-    <StackLayout>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center">
+        
         <cards:SfCardView SwipeToDismiss="True"
                           VerticalOptions="Center"
                           HorizontalOptions="Center"
-                          x:Name="cardView"
                           Dismissed="SfCardView_Dismissed">
-
-            <StackLayout HeightRequest="100"
-                         BackgroundColor="Red"
-                         WidthRequest="200">
                 <Label  Text="CardView1"
                         FontSize="Large"
+                        BackgroundColor="Red"
                         TextColor="White"
+                        HeightRequest="100"
+                        WidthRequest="300"
                         VerticalOptions="CenterAndExpand"
                         HorizontalOptions="CenterAndExpand"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"/>
-            </StackLayout>
+          
         </cards:SfCardView>
     </StackLayout>
 

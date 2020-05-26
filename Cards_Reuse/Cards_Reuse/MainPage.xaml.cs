@@ -16,7 +16,7 @@ namespace Cards_Reuse
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        int i = 0;
+        int i = 2;
         public MainPage()
         {
             InitializeComponent();
@@ -26,10 +26,10 @@ namespace Cards_Reuse
         private async void SfCardView_Dismissed(System.Object sender, Syncfusion.XForms.Cards.DismissedEventArgs e)
         {
             await Task.Delay(400);
-            i++;
             SfCardView view = sender as SfCardView;
-            ((view.Content as StackLayout).Children[0] as Label).Text = "CardView " + i.ToString();
+            (view.Content as Label).Text = "CardView " + i.ToString();
             view.IsDismissed = false;
+            i++;
         }
 
     }
