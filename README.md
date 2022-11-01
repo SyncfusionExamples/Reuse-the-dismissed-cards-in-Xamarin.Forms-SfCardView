@@ -1,6 +1,6 @@
 # Reuse the dismissed cards in Xamarin.Forms SfCardView
 
-This repository contains sample for how to reuse the dismissed cards in the [Syncfusion Xamarin.Forms Card View](https://help.syncfusion.com/xamarin/cards/getting-started) control.
+This repository contains sample to reuse the dismissed cards in the [Syncfusion Xamarin.Forms Card View](https://help.syncfusion.com/xamarin/cards/getting-started) control.
 
 Please refer the KB through this [link](https://www.syncfusion.com/kb/11648/how-to-reuse-the-dismissed-cards-in-xamarin-forms-sfcardview).
 
