@@ -1,68 +1,55 @@
-# Reuse-the-cards-in-Xamarin.Forms-SfCardView
+# Reuse the dismissed cards in Xamarin.Forms SfCardView
 
-This section explains how to reuse a dismissed card in SfCardView. This allows reusing a single card for showing different content with every swipe. This will optimize the memory usage of your Xamarin application by avoid creating separate card for each content. For more please refer the below KB
+This repository contains sample to reuse the dismissed cards in the [Syncfusion Xamarin.Forms Card View](https://help.syncfusion.com/xamarin/cards/getting-started) control.
 
-[How to reuse the dismissed cards in Xamarin.Forms SfCardView](https://www.syncfusion.com/kb/11648/?utm_medium=listing&utm_source=github-examples)
+Please refer the KB through this [link](https://www.syncfusion.com/kb/11648/how-to-reuse-the-dismissed-cards-in-xamarin-forms-sfcardview).
 
- 
-You can refer to this [Getting Started](https://help.syncfusion.com/xamarin/cards/getting-started?_ga=2.144022709.1232783100.1593359517-1450022673.1574142796) documentation for more details about the CardView.
+## Syncfusion controls:
 
+This project used the following Syncfusion control(s):
+* [SfCardView](https://www.syncfusion.com/xamarin-ui-controls/xamarin-cards)
 
-[SfCardView](https://help.syncfusion.com/xamarin/cards/getting-started?_ga=2.181927463.1232783100.1593359517-1450022673.1574142796#sfcardview) supports dismissing a card from the view by enabling the [SwipeToDismiss](https://help.syncfusion.com/xamarin/cards/getting-started?_ga=2.181927463.1232783100.1593359517-1450022673.1574142796#swipetodismiss) property. This property also enables reusing the dismissed card to optimize the memory usage of your Xamarin application. Please refer the below code snippet to reuse the dismissed card.
+## Supported platforms
 
- 
+| Platforms | Supported versions |
+| --------- | ------------------ |
+| Android   | API level 21 and later versions |
+| iOS | iOS 9.0 and later versions |
+| UWP | Windows 10 devices |
 
-To add cards to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Xamarin.Cards](https://www.nuget.org/packages/Syncfusion.Xamarin.Cards/), and then install it.
+## Requirements to run the sample
 
+* [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 
-**[XAML]**
-```
-<StackLayout HorizontalOptions="Fill" VerticalOptions="Center">
- 
-            <!--  CardView with SwipeToDismiss property enabled  -->
-            <cards:SfCardView
-                SwipeToDismiss="True"
-                Dismissed="SfCardView_Dismissed"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
- 
-                <!--  Label to show a content inside card  -->
-                <Label
-                    BackgroundColor="Red"
-                    FontSize="Large"
-                    HeightRequest="100"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="Card View"
-                    TextColor="White"
-                    VerticalOptions="CenterAndExpand"
-                    VerticalTextAlignment="Center"
-                    WidthRequest="300" />
- 
-            </cards:SfCardView>
- 
-</StackLayout>
-```
+Refer to the following link for more details - [System Requirements](https://help.syncfusion.com/xamarin/system-requirements)
 
-**[C#]**
+## How to run the sample
 
-```
+1. Clone the sample and open it in Visual Studio.
 
-private int cardNumber;
- 
-private async void SfCardView_Dismissed(System.Object sender, Syncfusion.XForms.Cards.DismissedEventArgs e)
-        {
-            await Task.Delay(400);
-            SfCardView view = sender as SfCardView;
-            (view.Content as Label).Text = "Card View " + cardNumber.ToString();
-            view.IsDismissed = false;
-            cardNumber++;
-        }
-```
- 
-**SwipeToDismiss Property won’t work when you add the SfCardView as a child of SfCardLayout**
+   *Note: If you download the sample using the "Download ZIP" option, right-click it, select Properties, and then select Unblock.*
+   
+2. Register your license key in the App.xaml.cs file as demonstrated in the following code.
 
-Also refer our [feature tour page](https://www.syncfusion.com/xamarin-ui-controls/xamarin-cards) to know more features available in our button.
+		public App()
+		{
+			//Register Syncfusion license
+			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+	
+			InitializeComponent();
+	
+			MainPage = new App1.MainPage();
+		}
+		
+	Refer to this [link](https://help.syncfusion.com/xamarin/licensing/overview) for more details.
+	
+3. Clean and build the application.
+
+4. Run the application.
+
+## License
+
+Syncfusion has no liability for any damage or consequence that may arise by using or viewing the samples. The samples are for demonstrative purposes, and if you choose to use or access the samples, you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, for accessing, or viewing the samples. By accessing, viewing, or seeing the samples, you acknowledge and agree Syncfusion’s samples will not allow you seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize, or otherwise do anything with Syncfusion’s samples.
 
 # Troubleshooting
 ## Path too long exception
